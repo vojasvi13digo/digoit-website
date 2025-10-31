@@ -358,6 +358,161 @@ body {
       .cyber-intro, .cyber-industries, .cyber-why, .cyber-banner { padding-left: 0.7rem; padding-right: 0.7rem; }
       .cyber-intro { padding: 1.1rem 0.7rem; }
     }
+    /* ===== MOBILE OPTIMIZATION FOR CYBERSECURITY PAGE ===== */
+@media (max-width: 768px) {
+
+  /* Navbar adjustments */
+  .unique-navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    height: auto;
+  }
+  .navbar-left {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .site-logo {
+    width: 55px;
+  }
+  .tagline {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.7rem;
+  }
+  .navbar-left p {
+    font-size: 30px;
+  }
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.4rem;
+    gap: 1rem;
+  }
+  .navbar-links a {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(100deg,#25b6fe 0%, #2186eb 80%, #ffe172 100%);
+    color: #fff;
+    border-radius: 1.5rem;
+  }
+
+  /* Hero section */
+  .cyber-hero {
+    padding: 2rem 1rem;
+  }
+  .cyber-hero h1 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+  .cyber-hero-img {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  /* Intro section */
+  .cyber-intro {
+    max-width: 95%;
+    padding: 1.2rem 1rem;
+  }
+  .cyber-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Features section */
+  .cyber-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 95%;
+    margin: 2rem auto;
+  }
+  .cyber-feature {
+    padding: 1rem;
+    text-align: left;
+  }
+  .cyber-feature h3 {
+    font-size: 1.05rem;
+  }
+  .cyber-feature p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Industries section */
+  .cyber-industries {
+    max-width: 95%;
+    padding: 1.2rem 1rem;
+  }
+  .cyber-industries h2 {
+    font-size: 1.15rem;
+    text-align: center;
+  }
+  .cyber-industries-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .cyber-industry {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  /* Why Choose section */
+  .cyber-why {
+    max-width: 95%;
+    padding: 1.5rem 1rem;
+  }
+  .cyber-why h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .cyber-why li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Banner section */
+  .cyber-banner {
+    max-width: 95%;
+    font-size: 1.1rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* ===== EXTRA SMALL SCREEN FIX (below 480px) ===== */
+@media (max-width: 480px) {
+  .navbar-left p {
+    font-size: 24px;
+  }
+  .tagline {
+    display: none;
+  }
+  .site-logo {
+    width: 45px;
+  }
+  .navbar-links a {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+  }
+
+  .cyber-hero h1 {
+    font-size: 1.1rem;
+  }
+  .cyber-intro p,
+  .cyber-feature p,
+  .cyber-why li {
+    font-size: 0.9rem;
+  }
+  .cyber-banner {
+    font-size: 1rem;
+    padding: 1.3rem 0.8rem;
+  }
+}
+
   </style>
 </head>
 <body>

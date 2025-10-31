@@ -12,12 +12,12 @@ html{
   scroll-padding-top: 100px;
 }
 
-/* Unique Navbar with Logo & Tagline */
+/* New Responsive Hamburger Navbar */
 .unique-navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 90vw;
   z-index: 100;
   padding: 0.6rem 2.2rem;
   background: rgba(255,255,255,0.75);
@@ -25,19 +25,14 @@ html{
   box-shadow: 0 8px 32px rgba(33,134,235,0.11), 0 1.5px 0 0 #2186eb1a;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-  transition: transform 0.38s cubic-bezier(.77,0,.18,1), background 0.18s;
-  transform: translateY(0);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 72px;
+  min-height: 70px;
   max-height: 88px;
 }
 
-.unique-navbar.hide {
-  transform: translateY(-150%);
-}
-
+/* Navbar left: logo + tagline */
 .navbar-left {
   display: flex;
   align-items: center;
@@ -45,14 +40,15 @@ html{
 }
 
 .site-logo {
-  height: auto;
-  width: 100px;
+  height: 36px;
+  width: 36px;
   border-radius: 15%;
   object-fit: contain;
   box-shadow: 0 2px 16px #2186eb25;
   background: #fff;
 }
 
+/* Tagline */
 .tagline {
   font-size: 1.13rem;
   color: #2186eb;
@@ -63,15 +59,40 @@ html{
   border-radius: 1.3rem;
   box-shadow: 0 0.5px 8px #d9eafd7a;
   margin-left: 0.05rem;
+  transition: font-size 0.3s;
 }
 
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #2186eb;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu-icon:hover {
+  background: #d9eafd;
+}
+
+/* Navbar links default (desktop) */
 .navbar-links {
   display: flex;
-  gap: 1.45rem;
+  gap: 0.7rem;
   align-items: center;
-  list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+}
+
+.unique-navbar a {
+  font-size: 1rem;
+  padding: 0.38rem 1rem;
 }
 
 .navbar-links li {
@@ -88,18 +109,17 @@ html{
   padding: 0.52rem 1.3rem;
   border-radius: 1.5rem;
   text-decoration: none;
-  /* New vibrant blue gradient background */
   background: linear-gradient(100deg,#b8d5f1 0%, #25b6fe 70%, #ffe172 100%);
   box-shadow: 0 2px 16px 0 #2186eb25, 0 0.5px 8px #25b6fe15;
   border: none;
-  transition: 
+  transition:
     background 0.21s cubic-bezier(.55,0,.25,1),
-    color 0.15s, 
+    color 0.15s,
     box-shadow 0.18s,
     transform 0.11s;
 }
 
-.unique-navbar a:hover, 
+.unique-navbar a:hover,
 .unique-navbar a:focus {
   background: linear-gradient(100deg, #25b6fe 0%, #2186eb 80%, #ffe172 100%);
   color: #fff;
@@ -108,22 +128,18 @@ html{
   outline: none;
 }
 
-.unique-navbar .nav-icon {
-  font-size: 1.18rem;
-  opacity: 0.9;
-}
-
+/* Responsive hamburger menu: */
 @media (max-width: 900px) {
   .unique-navbar {
     padding: 0.4rem 0.7rem;
   }
-  .navbar-left .tagline {
+  .site-logo {
+    height: 32px;
+    width: 32px;
+  }
+  .tagline {
     font-size: 1rem;
     padding: 0.19rem 0.7rem 0.19rem 0.6rem;
-  }
-  .site-logo {
-    height: 36px;
-    width: 36px;
   }
   .navbar-links {
     gap: 0.7rem;
@@ -134,24 +150,48 @@ html{
   }
 }
 
+/* Hamburger menu on mobile */
+@media (max-width: 600px) {
+  .tagline {
+    font-size: 0.82rem;
+    padding: 0.14rem 0.5rem 0.14rem 0.4rem;
+  }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 6px 32px #2186eb22;
+    padding: 0.7rem 0.5rem;
+    z-index: 1000;
+    min-width: 140px;
+    align-items: flex-end;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    background: none;
+  }
+  .menu-toggle:checked ~ .navbar-links {
+    display: flex;
+  }
+}
+
+/* Hide menu toggle visually */
+.menu-toggle {
+  display: none;
+}
+
+/* body section */
 body {
   padding-top: 90px; /* ensures content not hidden under navbar */
   cursor: url('./robot.png'), auto;
 }
-@media (max-width: 600px) {
-  .site-header {
-    padding: 0.7rem 0.9rem 0.3rem 0.9rem;
-  }
-  .site-logo {
-    width: 45px;
-  }
-  .tagline {
-    font-size: 0.92rem;
-  }
-}
-
-/* Reset and base styles */
-* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -530,26 +570,77 @@ footer {
   letter-spacing: 0.03em;
 }
 
-/* Responsive */
-@media (max-width: 800px) {
-  .about {
-    padding: 1.5rem 1rem;
+/* ===== CONTACT SECTION MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+    text-align: center;
   }
-  .services-grid {
+
+  .contact h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .contact-info div {
+    max-width: 90%;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .social-links ul {
+    display: flex;
+    justify-content: center;
     gap: 1.2rem;
+    margin-top: 1.5rem;
+    padding: 0;
+    list-style: none;
   }
-}
-@media (max-width: 500px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .about h2, .services h2, .contact h2 {
+
+  .social-links .item a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #007bff, #25b6fe);
+    color: #fff;
     font-size: 1.3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .about, .services, .contact {
-    padding: 1rem 0.4rem;
-  }
-  .service-card {
-    padding: 1.1rem 0.5rem;
+
+  .social-links .item a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
   }
 }
+
+/* ===== EXTRA SMALL SCREENS (below 480px) ===== */
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info {
+    gap: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .social-links .item a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+

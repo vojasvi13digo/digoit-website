@@ -358,6 +358,160 @@ body {
       .cad-intro, .cad-industries, .cad-why, .cad-banner { padding-left: 0.7rem; padding-right: 0.7rem; }
       .cad-intro { padding: 1.1rem 0.7rem; }
     }
+    /* ===== MOBILE OPTIMIZATION FOR APP DEVELOPMENT PAGE ===== */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .unique-navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    height: auto;
+  }
+  .navbar-left {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .site-logo {
+    width: 55px;
+  }
+  .tagline {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.7rem;
+  }
+  .navbar-left p {
+    font-size: 30px;
+  }
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.4rem;
+    gap: 1rem;
+  }
+  .navbar-links a {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(100deg,#25b6fe 0%, #2186eb 80%, #ffe172 100%);
+    color: #fff;
+    border-radius: 1.5rem;
+  }
+
+  /* Hero section */
+  .cad-hero {
+    padding: 2.2rem 1rem;
+  }
+  .cad-hero h1 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+  .cad-hero-img {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  /* Intro section */
+  .cad-intro {
+    max-width: 95%;
+    padding: 1.3rem 1rem;
+  }
+  .cad-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Features section */
+  .cad-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 95%;
+    margin: 2rem auto;
+  }
+  .cad-feature {
+    padding: 1.2rem 1rem;
+  }
+  .cad-feature h3 {
+    font-size: 1.05rem;
+  }
+  .cad-feature p {
+    font-size: 0.95rem;
+  }
+
+  /* Industries section */
+  .cad-industries {
+    max-width: 95%;
+    padding: 1.3rem 1rem;
+  }
+  .cad-industries h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .cad-industries-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .cad-industry {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+  .cad-industry span {
+    font-size: 0.95rem;
+  }
+
+  /* Why choose section */
+  .cad-why {
+    max-width: 95%;
+    padding: 1.4rem 1rem;
+  }
+  .cad-why h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .cad-why li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Banner */
+  .cad-banner {
+    font-size: 1.1rem;
+    padding: 1.4rem 1rem;
+    max-width: 95%;
+  }
+}
+
+/* ===== EXTRA SMALL SCREEN FIX (below 480px) ===== */
+@media (max-width: 480px) {
+  .navbar-left p {
+    font-size: 24px;
+  }
+  .tagline {
+    display: none;
+  }
+  .site-logo {
+    width: 45px;
+  }
+  .navbar-links a {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+  }
+
+  .cad-hero h1 {
+    font-size: 1.1rem;
+  }
+  .cad-intro p,
+  .cad-feature p,
+  .cad-why li {
+    font-size: 0.9rem;
+  }
+  .cad-banner {
+    font-size: 1rem;
+    padding: 1.2rem 0.8rem;
+  }
+}
+
   </style>
 </head>
 <body>

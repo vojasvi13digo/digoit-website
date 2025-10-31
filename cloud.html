@@ -358,6 +358,161 @@ body {
       .cloud-intro, .cloud-industries, .cloud-why, .cloud-banner { padding-left: 0.7rem; padding-right: 0.7rem; }
       .cloud-intro { padding: 1.1rem 0.7rem; }
     }
+    /* ===== MOBILE OPTIMIZATION FOR CLOUD PAGE ===== */
+@media (max-width: 768px) {
+
+  /* Navbar adjustments */
+  .navbar-left p {
+    font-size: 30px;
+  }
+  .unique-navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    height: auto;
+  }
+  .navbar-left {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .site-logo {
+    width: 55px;
+  }
+  .tagline {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.7rem;
+  }
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.4rem;
+    gap: 1rem;
+  }
+  .navbar-links a {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(100deg,#25b6fe 0%, #2186eb 80%, #ffe172 100%);
+    color: #fff;
+    border-radius: 1.5rem;
+  }
+
+  /* Hero section */
+  .cloud-hero {
+    padding: 2rem 1rem;
+  }
+  .cloud-hero h1 {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+  .cloud-hero-img {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  /* Intro section */
+  .cloud-intro {
+    max-width: 95%;
+    padding: 1.2rem 1rem;
+  }
+  .cloud-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Features section */
+  .cloud-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 95%;
+    margin: 2rem auto;
+  }
+  .cloud-feature {
+    padding: 1rem;
+    text-align: left;
+  }
+  .cloud-feature h3 {
+    font-size: 1.05rem;
+  }
+  .cloud-feature p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Industries section */
+  .cloud-industries {
+    max-width: 95%;
+    padding: 1.2rem 1rem;
+  }
+  .cloud-industries h2 {
+    font-size: 1.15rem;
+    text-align: center;
+  }
+  .cloud-industries-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .cloud-industry {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  /* Why Choose section */
+  .cloud-why {
+    max-width: 95%;
+    padding: 1.5rem 1rem;
+  }
+  .cloud-why h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .cloud-why li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Banner section */
+  .cloud-banner {
+    max-width: 95%;
+    font-size: 1.1rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* ===== EXTRA SMALL SCREEN FIX (below 480px) ===== */
+@media (max-width: 480px) {
+  .navbar-left p {
+    font-size: 24px;
+  }
+  .tagline {
+    display: none;
+  }
+  .site-logo {
+    width: 45px;
+  }
+  .navbar-links a {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+  }
+
+  .cloud-hero h1 {
+    font-size: 1.1rem;
+  }
+  .cloud-intro p,
+  .cloud-feature p,
+  .cloud-why li {
+    font-size: 0.9rem;
+  }
+  .cloud-banner {
+    font-size: 1rem;
+    padding: 1.3rem 0.8rem;
+  }
+}
+
   </style>
 </head>
 <body>

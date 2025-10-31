@@ -367,6 +367,66 @@ body {
       .ai-intro, .ai-industries, .ai-why, .ai-banner { padding-left: 0.7rem; padding-right: 0.7rem; }
       .ai-intro { padding: 1.1rem 0.7rem; }
     }
+
+    /* --- MOBILE OPTIMIZATION FOR AI PAGE --- */
+@media (max-width: 768px) {
+  /* Shrink 'AI' heading text */
+  .navbar-left p {
+    font-size: 28px;
+  }
+
+  /* Adjust navbar spacing */
+  .unique-navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Adjust tagline and logo for better fit */
+  .navbar-left {
+    gap: 0.5rem;
+  }
+  .site-logo {
+    width: 55px;
+  }
+  .tagline {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* Make Home button visible and properly sized */
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.4rem;
+    gap: 1rem;
+  }
+  .navbar-links a {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(100deg,#25b6fe 0%, #2186eb 80%, #ffe172 100%);
+    color: #fff;
+    border-radius: 1.5rem;
+  }
+}
+
+/* Very small screens (below 480px) */
+@media (max-width: 480px) {
+  .navbar-left p {
+    font-size: 22px;
+  }
+  .tagline {
+    display: none; /* hides tagline if it overlaps */
+  }
+  .site-logo {
+    width: 48px;
+  }
+  .navbar-links a {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+  }
+}
+
   </style>
 </head>
 <body>
